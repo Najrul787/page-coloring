@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coloring Plugin</title>
+	<meta charset="utf-8">
+	<style type="text/css" id="wow">
+		*{margin:0;padding:0;box-sizing: border-box;}
+		button{background: #ddd;color: #333;border: 0;}
+	</style>
+</head>
+<body>
+<h1>This is the title</h1>
+<button>ipsum dolor sit amet</button>
+<button>ipsum dolor sit amet</button>
+<button>ipsum dolor sit amet</button>
+<button>ipsum dolor sit amet</button>
+<button>ipsum dolor sit amet</button>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="asstes/coloring.js"></script>
+	<script type="text/javascript">
+		$(document).coloring({
+			caption:'',
+			default:'assets/default.css',
+			colors:{
+				red:'assets/red.css',
+				green:'assets/green.css',
+			}
+		});
+	</script>
+</body>
+</html>
