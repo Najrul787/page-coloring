@@ -10,13 +10,13 @@
 
 ```javascript
 $(document).coloring({
-			caption:'',
-			default:'assets/default.css',
-			colors:{
-				red:'assets/red.css',
-				green:'assets/green.css',
-			}
-		});
+	caption:'',
+	default:'assets/default.css',
+	colors:{
+		red:'assets/red.css',
+		green:'assets/green.css',
+	}
+});
 
 ```
 
