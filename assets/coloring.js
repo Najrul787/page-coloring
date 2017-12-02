@@ -40,8 +40,8 @@ $(document).coloring({
 			let head = $('head');
 			let box = '.' + classes.box;
 			let css = '';
-			css += box + '{width: 170px;padding:15px 8px;position: absolute;top:150px;left: -170px;background: #606060!important;font-family: arial;transition: all .3s}';
-			css += box + ' .' + classes.toggleBtn + '{border: 0;cursor:pointer;position: absolute;right: -35px;top: 0;width: 35px;height: 35px;background: #454545!important;line-height: 25px;font-size:30px;padding:0;color:#fff}';
+			css += box + '{width: 170px;padding:15px 8px;position: fixed;top:150px;left: -170px;background: #606060!important;font-family: arial;transition: all .3s}';
+			css += box + ' .' + classes.toggleBtn + '{border: 0;cursor:pointer;position: absolute;right: -35px;top: 0;width: 35px;height: 35px;background: #454545!important;line-height: 25px;font-size:27px;padding:0;color:#fff}';
 			css += box + ' ul{margin:0;padding:0;list-style: none;}';
 			css += box + ' li{width: 20px;height: 20px;transition:all .3s;background: #eee;float: left;margin: 4px;cursor: pointer;}';
 			css += box + ' li:hover{border-radius:initial}';
