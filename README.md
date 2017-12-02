@@ -24,6 +24,6 @@ $(document).coloring({
 
 `` default `` set default theme whene load document
 
-`` colors `` add color name and path `` colorname : 'source fiel' ``
+`` colors `` add color name and path `` colorname : 'source file' ``
 
 # thank you
