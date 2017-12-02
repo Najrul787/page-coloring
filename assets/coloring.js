@@ -40,12 +40,13 @@ $(document).coloring({
 			let head = $('head');
 			let box = '.' + classes.box;
 			let css = '';
-			css += box + '{width: 150px;padding:4px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);position: absolute;top:40px;left: -150px;background: #fff!important;font-family: arial;transition: all .3s}';
-			css += box + ' .' + classes.toggleBtn + '{border: 1px solid #eee;cursor:pointer;position: absolute;right: -30px;top: 0;width: 30px;height: 30px;background-color: #fff!important;line-height: 30px;}';
+			css += box + '{width: 170px;padding:15px 8px;position: absolute;top:150px;left: -170px;background: #606060!important;font-family: arial;transition: all .3s}';
+			css += box + ' .' + classes.toggleBtn + '{border: 0;cursor:pointer;position: absolute;right: -35px;top: 0;width: 35px;height: 35px;background: #454545!important;line-height: 25px;font-size:30px;padding:0;color:#fff}';
 			css += box + ' ul{margin:0;padding:0;list-style: none;}';
-			css += box + ' li{width: 23px;height: 23px;transition:all .3s;background: #eee;float: left;border:2px solid #ddd;margin: 4px;cursor: pointer;border-radius: 3px}';
+			css += box + ' li{width: 20px;height: 20px;transition:all .3s;background: #eee;float: left;margin: 4px;cursor: pointer;}';
 			css += box + ' li:hover{border-radius:initial}';
-			css += box + ' p{font-size: 14px;margin-bottom: 10px;color: #555;}';
+			css += box + ' li.cactive{border:2px solid #ccc}';
+			css += box + ' p{font-size: 14px;margin-bottom: 10px;color: #fff;}';
 			style.html(css);
 			head.append(style);
 		}
@@ -69,6 +70,7 @@ $(document).coloring({
 			_box.addClass(classes.box);
 			_caption.html(options.caption);
 			_toggleBtn.addClass(classes.toggleBtn);
+			_toggleBtn.html('&#9881;');
 			if (options.default) {
 				_source.attr('href', options.default);
 			}
@@ -87,7 +89,7 @@ $(document).coloring({
 			mainBox.children('.' + classes.toggleBtn).click(function() {
 				if (mainBox.css('left') === '0px') {
 					mainBox.css({
-						left: '-150px'
+						left: '-170px'
 					});
 				} else {
 					mainBox.css({
@@ -100,6 +102,8 @@ $(document).coloring({
 		that.activate = function() {
 			let li = mainBox.find('[data-key]');
 			li.click(function() {
+				li.removeClass('cactive');
+				$(this).addClass('cactive');
 				let key = $(this).data('key');
 				source.attr('href', options.colors[key]);
 			});
